@@ -68,32 +68,14 @@ const PAPERS = [
   // Submitted destinations are intentionally hidden — only the
   // "Submitted YYYY" status + arXiv link are surfaced.
   {
-    id: "sub-cherednik",
-    group: "submitted",
-    year: "2026",
-    title: {
-      en: "Irreducible non-holonomic modules for rational Cherednik algebras",
-      pt: "Módulos não-holônomos irredutíveis para álgebras de Cherednik racionais",
-    },
-    authors: "F. A. Santos · J. Schwarz",
-    venue: null, venueShort: null, link: null,
-    metrics: { en: "Submitted 2026", pt: "Submetido em 2026" },
-    arxiv: "2607.27038",
-    tags: ["Weyl algebras", "Cherednik algebras", "non-holonomic", "Gelfand–Kirillov"],
-    abstract: {
-      en: "Let 𝕂 be an algebraically closed field of characteristic zero and let Aₙ(𝕂) be the n-th Weyl algebra. We prove that for every complex reflection group G and every n ≥ 2 the ring of invariant differential operators Aₙ(𝕂)^G has irreducible non-holonomic modules of Gelfand–Kirillov dimension 2n−1, and we exhibit such modules explicitly. Through the Morita equivalence between Aₙ(𝕂)^G and the rational Cherednik algebra H_𝔠 at an integral parameter, we deduce that H_𝔠 has irreducible non-holonomic modules of Gelfand–Kirillov dimension 2n−1 for n ≥ 2. In an appendix, following a proof kindly shared by O. Mathieu, we show that Aₙ(𝕂) has irreducible modules of every Gelfand–Kirillov dimension in the interval [n, 2n−1].",
-      pt: "Seja 𝕂 um corpo algebricamente fechado de característica zero e seja Aₙ(𝕂) a n-ésima álgebra de Weyl. Provamos que, para todo grupo de reflexões complexas G e todo n ≥ 2, o anel de operadores diferenciais invariantes Aₙ(𝕂)^G possui módulos não-holônomos irredutíveis de dimensão de Gelfand–Kirillov 2n−1, e exibimos tais módulos explicitamente. Pela equivalência de Morita entre Aₙ(𝕂)^G e a álgebra de Cherednik racional H_𝔠 em um parâmetro inteiro, deduzimos que H_𝔠 possui módulos não-holônomos irredutíveis de dimensão de Gelfand–Kirillov 2n−1 para n ≥ 2. Em um apêndice, seguindo uma prova gentilmente compartilhada por O. Mathieu, mostramos que Aₙ(𝕂) possui módulos irredutíveis de toda dimensão de Gelfand–Kirillov no intervalo [n, 2n−1].",
-    },
-  },
-  {
     id: "sub-dictionary",
     group: "submitted",
     year: "2026",
     title: {
-      en: "A partial dictionary between universal central extensions and orthogonal polynomials in the superelliptic Krichever–Novikov setting",
-      pt: "Um dicionário parcial entre extensões centrais universais e polinômios ortogonais no contexto de Krichever–Novikov superelíptico",
+      en: "Dictionary between UCE cocycles and orthogonal polynomials",
+      pt: "Dicionário entre cociclos da UCE e polinômios ortogonais",
     },
-    authors: "F. A. Santos",
+    authors: "F. A. Santos · M. Neklyudov · V. Futorny",
     venue: null, venueShort: null, link: null,
     metrics: { en: "Submitted 2026", pt: "Submetido em 2026" },
     arxiv: "2605.02530",
@@ -101,24 +83,6 @@ const PAPERS = [
     abstract: {
       en: "Builds an explicit dictionary between the cocycle data of the universal central extension of superelliptic Krichever–Novikov algebras — on both the current and derivation sides — and the three-term recurrences of classical and non-classical orthogonal polynomial families. The Der(A) half of the dictionary is treated systematically for the first time.",
       pt: "Constrói um dicionário explícito entre os dados de cociclo da extensão central universal de álgebras de Krichever–Novikov superelípticas — tanto no lado de correntes quanto no de derivações — e as recorrências de três termos das famílias clássicas e não-clássicas de polinômios ortogonais. O lado Der(A) do dicionário é tratado sistematicamente pela primeira vez.",
-    },
-  },
-  {
-    id: "sub-superelliptic-ii",
-    group: "submitted",
-    year: "2026",
-    title: {
-      en: "Superelliptic affine Lie algebras and orthogonal polynomials II",
-      pt: "Álgebras de Lie afins superelípticas e polinômios ortogonais II",
-    },
-    authors: "F. A. Santos · M. Neklyudov · V. Futorny",
-    venue: null, venueShort: null, link: null,
-    metrics: { en: "Submitted 2026", pt: "Submetido em 2026" },
-    arxiv: "2603.29082",
-    tags: ["superelliptic", "orthogonal polynomials", "cocycle basis", "recursion relations"],
-    abstract: {
-      en: "Let g be a finite-dimensional complex simple Lie algebra and r, m ≥ 2. The universal central extension of the superelliptic current algebra g ⊗ A is ĝ ⊗ A ≅ g ⊗ A ⊕ (Ω¹_A/dA), with A = C[t, t⁻¹, u]/⟨uᵐ − (1 − 2ctʳ + t²ʳ)⟩. Computes the recursion relations governing a natural cocycle basis and shows how they assemble into orthogonal polynomial families, extending the structural–analytic correspondence of the first paper to this superelliptic family.",
-      pt: "Seja g uma álgebra de Lie simples complexa de dimensão finita e r, m ≥ 2. A extensão central universal da álgebra de correntes superelíptica g ⊗ A é ĝ ⊗ A ≅ g ⊗ A ⊕ (Ω¹_A/dA), com A = C[t, t⁻¹, u]/⟨uᵐ − (1 − 2ctʳ + t²ʳ)⟩. Calcula as relações de recorrência que governam uma base natural de cociclos e mostra como elas se organizam em famílias de polinômios ortogonais, estendendo a correspondência estrutural–analítica do primeiro artigo a esta família superelíptica.",
     },
   },
   {
@@ -178,12 +142,12 @@ const PAPERS = [
 
   // ── IN PREPARATION ─────────────────────────────────────────────────────────
   {
-    id: "ternary",
+    id: "kronecker",
     group: "in-prep",
     year: "2026",
     title: {
-      en: "Ternary Lie Algebras",
-      pt: "Álgebras de Lie ternárias",
+      en: "Irreducibility under Kronecker substitutions",
+      pt: "Irredutibilidade sob substituições do tipo Kronecker",
     },
     authors: "F. A. Santos · V. Futorny · M. Neklyudov",
     venue: null,
@@ -191,10 +155,30 @@ const PAPERS = [
     metrics: { en: "Manuscript in finalisation", pt: "Manuscrito em finalização" },
     link: null,
     arxiv: null,
-    tags: ["ternary algebras", "Jordan–Schwinger", "sl₂", "Yangians"],
+    tags: ["Kronecker", "irreducibility", "polynomials"],
     abstract: {
-      en: "Let A be a Lie algebra over ℂ and ψ: A → End(V) a representation. We study the ternary Lie algebra A^tern spanned by the operators x_ij(a) formed from the matrix coefficients of ψ. In a nondegenerate realization, a single 2×2 determinant of matrix coefficients decides the isomorphism type of every four-generator configuration: abelian when the four relevant coefficients vanish, isomorphic to sl₂(ℂ) ⊕ ℂ when the determinant does not, and nonabelian solvable otherwise. In the Jordan–Schwinger realization we determine A^tern completely: it is the algebra of endomorphisms of V with image in the range W₀ = ψ(A)V, hence A^tern ≅ gl(W₀) ⋉ Hom(V/W₀, W₀), solvable exactly when dim W₀ ≤ 1. We construct central elements by cofactor expansion and develop a universal ternary algebra with its evaluation quotient over the Heisenberg algebra, illustrated by an sl₂ example with a parallel Yangian realization.",
-      pt: "Seja A uma álgebra de Lie sobre ℂ e ψ: A → End(V) uma representação. Estudamos a álgebra de Lie ternária A^tern gerada pelos operadores x_ij(a) formados a partir dos coeficientes matriciais de ψ. Em uma realização não-degenerada, um único determinante 2×2 de coeficientes matriciais decide o tipo de isomorfismo de toda configuração de quatro geradores: abeliana quando os quatro coeficientes relevantes se anulam, isomorfa a sl₂(ℂ) ⊕ ℂ quando o determinante não se anula, e solúvel não-abeliana caso contrário. Na realização de Jordan–Schwinger determinamos A^tern completamente: é a álgebra dos endomorfismos de V com imagem contida em W₀ = ψ(A)V, portanto A^tern ≅ gl(W₀) ⋉ Hom(V/W₀, W₀), solúvel exatamente quando dim W₀ ≤ 1. Construímos elementos centrais por expansão em cofatores e desenvolvemos uma álgebra ternária universal com seu quociente de avaliação sobre a álgebra de Heisenberg, ilustrada por um exemplo em sl₂ com uma realização paralela via Yangians.",
+      en: "When does a Kronecker-type substitution preserve polynomial irreducibility? Provides operational criteria in controlled classes, with a mixed-radix encoding paired with a geometric reading via moment curves.",
+      pt: "Quando uma substituição do tipo Kronecker preserva a irredutibilidade polinomial? Critérios operacionais em classes controladas, com codificação mixed-radix e leitura geométrica via curvas monomiais.",
+    },
+  },
+  {
+    id: "weyl-invariants",
+    group: "in-prep",
+    year: "2026",
+    title: {
+      en: "Modules over invariant subalgebras of Weyl algebras",
+      pt: "Módulos sobre subálgebras invariantes de álgebras de Weyl",
+    },
+    authors: "F. A. Santos · J. Schwarz",
+    venue: null,
+    venueShort: { en: "In preparation", pt: "Em preparação" },
+    metrics: { en: "Manuscript in finalisation", pt: "Manuscrito em finalização" },
+    link: null,
+    arxiv: null,
+    tags: ["Weyl algebras", "invariants", "Gelfand–Kirillov"],
+    abstract: {
+      en: "Detects and exhibits non-holonomic modules arising from S₂-invariants of Weyl algebras, with computational validations of Gelfand–Kirillov dimension on concrete examples.",
+      pt: "Detecta e exibe módulos não-holônomicos oriundos dos S₂-invariantes de álgebras de Weyl, com validações computacionais da dimensão de Gelfand–Kirillov em exemplos concretos.",
     },
   },
   {
@@ -227,7 +211,7 @@ const GROUPS = {
 
 const TALKS = [
   { date: "2027-01-15", city: "Bujumbura, Burundi",   venue: "Workshop on Representation Theory",                     title: { en: "TBA",                                                          pt: "A definir" },                                                       kind: "invited",  status: "upcoming" },
-  { date: "2026-07-08", city: "São Carlos, Brazil",   venue: "Escola de Álgebra",                                     title: { en: "Superelliptic Lie algebras II",                                pt: "Álgebras de Lie superelípticas II" },                               link: "https://algebra2026.icmc.usp.br", kind: "invited",  status: "past" },
+  { date: "2026-07-08", city: "São Carlos, Brazil",   venue: "Escola de Álgebra",                                     title: { en: "Superelliptic Lie algebras II",                                pt: "Álgebras de Lie superelípticas II" },                               link: "https://algebra2026.icmc.usp.br", kind: "invited",  status: "upcoming" },
   { date: "2024-11-12", city: "São Paulo, Brazil",    venue: "Workshop de Tendências Tecnológicas",                   title: { en: "A brief introduction to cellular automata",                    pt: "Uma breve introdução aos autômatos celulares" },                    kind: "workshop", status: "past" },
   { date: "2023-08-22", city: "Sumy, Ukraine",        venue: "Ukraine Algebra Conference",                            title: { en: "Superelliptic affine Lie algebras and non-classical orthogonal polynomials", pt: "Álgebras de Lie afins superelípticas e polinômios ortogonais não-clássicos" }, kind: "talk",     status: "past" },
   { date: "2022-09-14", city: "São Paulo, Brazil",    venue: "I Encontro Paulista da Pós-Graduação em Matemática",    title: { en: "Superelliptic affine Lie algebras and non-classical orthogonal polynomials", pt: "Álgebras de Lie superelípticas afins e polinômios ortogonais não-clássicos" }, kind: "talk",     status: "past" },
