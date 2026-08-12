@@ -50,7 +50,7 @@ function useLang() {
 const t = (node, lang) =>
   (node && typeof node === "object" && !Array.isArray(node) && lang in node) ? node[lang] : node;
 
-// ── Top nav ───────────────────────────────────────────────────────────────────
+// ── Top nav ───────────────────────────────────────────────────────────…
 function TopNav({ lang, setLang }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -81,14 +81,14 @@ function TopNav({ lang, setLang }) {
   );
 }
 
-// ── ORCiD badge ───────────────────────────────────────────────────────────────
+// ── ORCiD badge ──────────────────────────────────────────────────────────…
 function OrcidBadge() {
   return (
     <a className="orcid" href={`https://orcid.org/${ORCID}`} target="_blank" rel="noreferrer"
        title={`ORCiD ${ORCID}`} aria-label="ORCiD profile">
       <svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true">
         <circle cx="16" cy="16" r="16" fill="#A6CE39"/>
-        <path fill="#fff" d="M9.5 9.7h1.9V22h-1.9V9.7zM10.4 6.6c.7 0 1.2.6 1.2 1.2 0 .7-.6 1.2-1.2 1.2-.7 0-1.2-.6-1.2-1.2 0-.6.6-1.2 1.2-1.2zM13.7 9.7h4.6c4.4 0 6.3 3.2 6.3 6.2 0 3.3-2.5 6.2-6.2 6.2h-4.7V9.7zm1.9 10.7h2.5c3.6 0 4.4-2.7 4.4-4.5 0-2.9-1.8-4.5-4.5-4.5h-2.4v9z"/>
+        <path fill="#fff" d="M9.5 9.7h1.9V22h-1.9V9.7zM10.4 6.6c.7 0 1.2.6 1.2 1.2 0 .7-.6 1.2-1.2 1.2-.7 0-1.2-.6-1.2-1.2 0-.6.6-1.2 1.2-1.2zM13.7 9.7h4.6c4.4 0 6.3 3.2 6.3 6.2 0 3.3-2.5 6.2-6.2 [...]
       </svg>
       <span>ORCiD</span>
       <em>{ORCID}</em>
@@ -96,7 +96,7 @@ function OrcidBadge() {
   );
 }
 
-// ── Hero ──────────────────────────────────────────────────────────────────────
+// ── Hero ────────────────────────────────────────────────────────────…
 function Hero({ lang }) {
   const h = COPY.hero;
   return (
@@ -122,7 +122,7 @@ function Hero({ lang }) {
   );
 }
 
-// ── Statement ─────────────────────────────────────────────────────────────────
+// ── Statement ──────────────────────────────────────────────────────────…
 function About({ lang }) {
   const a = COPY.about;
   return (
@@ -149,7 +149,7 @@ function Statement({ lang }) {
   );
 }
 
-// ── Publications ──────────────────────────────────────────────────────────────
+// ── Publications ─────────────────────────────────────────────────────────…
 function Problems({ lang }) {
   const pr = COPY.problems;
   return (
@@ -248,7 +248,7 @@ function PaperRow({ paper, lang, onOpen }) {
   );
 }
 
-// ── Paper drawer ──────────────────────────────────────────────────────────────
+// ── Paper drawer ─────────────────────────────────────────────────────────…
 function PaperDrawer({ paper, lang, onClose }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -328,7 +328,7 @@ function PaperDrawer({ paper, lang, onClose }) {
   );
 }
 
-// ── Talks ─────────────────────────────────────────────────────────────────────
+// ── Talks ───────────────────────────────────────────────────────────……
 const fmtDate = (iso, lang) => {
   const [y, m, d] = iso.split("-").map(Number);
   const months = {
@@ -401,7 +401,7 @@ function TalkRow({ talk, lang }) {
   );
 }
 
-// ── CV ────────────────────────────────────────────────────────────────────────
+// ── CV ────────────────────────────────────────────────────────────……
 function CV({ lang }) {
   const cv = COPY.cv;
   return (
@@ -419,7 +419,7 @@ function CV({ lang }) {
   );
 }
 
-// ── Contact ───────────────────────────────────────────────────────────────────
+// ── Contact ───────────────────────────────────────────────────────────[…
 function Contact({ lang }) {
   const cc = COPY.contact;
   return (
@@ -461,7 +461,7 @@ function Footer({ lang, y2k, onToggleY2K }) {
   );
 }
 
-// ── Root ──────────────────────────────────────────────────────────────────────
+// ── Root ────────────────────────────────────────────────────────────[…
 function App() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [lang, setLang] = useLang();
@@ -479,7 +479,7 @@ function App() {
     r.style.setProperty("--rule", b.rule);
     r.style.setProperty("--rule-soft", b.ruleSoft);
     r.setAttribute("data-density", tweaks.density);
-    r.setAttribute("data-heads", tweaks.heads === "editorial" ? "editorial" : "sf");
+    r.setAttribute("data-heads", tweaks.heads);
   }, [tweaks]);
 
   useEffect(() => {
@@ -535,8 +535,7 @@ function App() {
                       onChange={(v) => setTweak("density", v)} />
           <TweakRadio label="Headings" value={tweaks.heads}
                       options={[
-                        { value: "sf",        label: "SF" },
-                        { value: "editorial", label: "Serif" },
+                        { value: "sf", label: "SF" },
                       ]}
                       onChange={(v) => setTweak("heads", v)} />
         </TweakSection>
